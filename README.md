@@ -14,6 +14,29 @@ Some updates from InSign1:
 
 ============================================================================================
 
+Additional information:
+
+Landmark type dataset (.csv):
+1. Random Forest
+2. Decision Trees
+3. K-Nearest Neighbors
+4. Naive Bayes
+5. Support Vector Machine
+Available graphs and tables:
+1. Classification Report
+2. Confusion Matrix
+3. Error Rate
+
+Image type dataset (.jpg):
+1. Convolutional Neural Networks
+Available graphs and tables:
+1. Classification Report
+2. Confusion Matrix
+3. Epoch Loss
+4. Epoch Accuracy
+
+============================================================================================
+
 We recommend using python 3.8.10 and pip 24.0 to be able to download all the appropriate dependencies.
 
 python -m venv venv
