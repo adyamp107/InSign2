@@ -1,6 +1,8 @@
+![InSign](https://github.com/adyamp107/InSign2/assets/137896283/486dd65d-dbff-4615-a64a-dff2d52a9902)
+
 # InSign2
 
-InSign2 is an application that can help deaf and mute people with disabilities to communicate with other people. In addition, InSign2 provides a dataset collection tool that allows users to create various languages ​​without limitations. InSign2 also provides graph and table features so you can analyze the machine learning and deep learning training models that have been created. InSign2 provides various algorithms such as Random Forest, Decision Tree, K-Nearest Neighbors, Support Vector Machine, Naive Bayes, Convolutional Neural Network, and training models from Azure Machine Learning (coming soon).
+InSign2 is an updated application from InSign1 and has the same function, namely being able to help deaf and mute people with disabilities to communicate with other people. Additionally, InSign2 provides a dataset collection tool that allows users to create multiple languages ​​without limitations. InSign2 also provides graph and table features so you can analyze the machine learning and deep learning training models that have been created. InSign2 provides various algorithms such as Random Forest, Decision Tree, K-Nearest Neighbors, Support Vector Machine, Naive Bayes, and Convolutional Neural Network.
 
 ============================================================================================
 
