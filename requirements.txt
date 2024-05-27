@@ -1,5 +1,5 @@
-eel
-opencv-python-headless
+customtkinter
+opencv-python
 mediapipe
 numpy
 pandas
