@@ -4,38 +4,36 @@
 
 InSign2 is an updated application from InSign1 and has the same function, namely being able to help deaf and mute people with disabilities to communicate with other people. Additionally, InSign2 provides a dataset collection tool that allows users to create multiple languages ​​without limitations. InSign2 also provides graph and table features so you can analyze the machine learning and deep learning training models that have been created. InSign2 provides various algorithms such as Random Forest, Decision Tree, K-Nearest Neighbors, Support Vector Machine, Naive Bayes, and Convolutional Neural Network.
 
-============================================================================================
-
-Some updates from InSign1:
+## Some updates from InSign1:
 1. More attractive UI.
 2. Collection of more varied datasets, namely landmarks (.csv) and images (.jpg).
 3. Six types of algorithms for training datasets, namely RandomForest, Decision Tree, K-Nearest neighbors, Naive Bayes, Support Vector Machine, and Convolutional Neural Network.
 4. Display graphs and tables for each training file which makes it easier for users to analyze their training model.
 
-============================================================================================
+## Additional information:
 
-Additional information:
-
-Landmark type dataset (.csv):
+### Landmark type dataset (.csv):
 1. Random Forest
 2. Decision Trees
 3. K-Nearest Neighbors
 4. Naive Bayes
 5. Support Vector Machine
+
 Available graphs and tables:
 1. Classification Report
 2. Confusion Matrix
 3. Error Rate
 
-Image type dataset (.jpg):
+### Image type dataset (.jpg):
 1. Convolutional Neural Networks
+
 Available graphs and tables:
 1. Classification Report
 2. Confusion Matrix
 3. Epoch Loss
 4. Epoch Accuracy
 
-============================================================================================
+## How to run the program
 
 We recommend using python 3.8.10 and pip 24.0 to be able to download all the appropriate dependencies.
 
@@ -53,7 +51,7 @@ python InSign.py
 
 Just ignore any warnings that appear, and it should run fine.
 
-============================================================================================
+## UI Display
 
 Home Page:
 
