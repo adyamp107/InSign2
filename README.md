@@ -1,4 +1,4 @@
-![InSign](https://github.com/adyamp107/InSign2/assets/137896283/486dd65d-dbff-4615-a64a-dff2d52a9902)
+![Picture2](https://github.com/adyamp107/InSign2/assets/137896283/8f8212e8-8ddf-4f39-9e85-b5ac068b3c75)
 
 # InSign2
 
@@ -18,7 +18,7 @@ pip --version (output: pip 24.0)
 
 pip install -r requirements.txt
 
-python app.py
+python InSign.py
 
 Just ignore any warnings that appear, and it should run fine.
 
