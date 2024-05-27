@@ -6,6 +6,14 @@ InSign2 is an updated application from InSign1 and has the same function, namely
 
 ============================================================================================
 
+Some updates from InSign1:
+1. More attractive UI.
+2. Collection of more varied datasets, namely landmarks (.csv) and images (.jpg).
+3. Six types of algorithms for training datasets, namely RandomForest, Decision Tree, K-Nearest neighbors, Naive Bayes, Support Vector Machine, and Convolutional Neural Network.
+4. Display graphs and tables for each training file which makes it easier for users to analyze their training model.
+
+============================================================================================
+
 We recommend using python 3.8.10 and pip 24.0 to be able to download all the appropriate dependencies.
 
 python -m venv venv
