@@ -39,7 +39,7 @@ We recommend using python 3.8.10 and pip 24.0 to be able to download all the app
 
 python -m venv venv
 
-python venv\Scripts\activate
+venv\Scripts\activate
 
 python --version (output: python 3.8.10)
 
