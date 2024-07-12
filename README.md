@@ -37,17 +37,15 @@ Available graphs and tables:
 
 We recommend using python 3.8.10 and pip 24.0 to be able to download all the appropriate dependencies.
 
-python -m venv venv
+1. python --version (output: python 3.8.10)
+2. pip --version (output: pip 24.0)
 
-venv\Scripts\activate
+Examplem usage:
 
-python --version (output: python 3.8.10)
-
-pip --version (output: pip 24.0)
-
-pip install -r requirements.txt
-
-python InSign.py
+1. python -m venv venv
+2. venv\Scripts\activate
+3. pip install -r requirements.txt
+4. python InSign.py
 
 Just ignore any warnings that appear, and it should run fine.
 
