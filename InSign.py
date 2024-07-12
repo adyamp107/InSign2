@@ -1,3 +1,19 @@
+"""
+Created by Adya Muhammad Prawira
+
+InSign2 is an updated application from InSign1 and has the same function, namely being able to help deaf and mute people with disabilities to communicate with other people. Additionally, InSign2 provides a dataset collection tool that allows users to create multiple languages ​​without limitations. InSign2 also provides graph and table features so you can analyze the machine learning and deep learning training models that have been created. InSign2 provides various algorithms such as Random Forest, Decision Tree, K-Nearest Neighbors, Support Vector Machine, Naive Bayes, and Convolutional Neural Network.
+
+Recommended:
+    Python version 3.8.10 or above
+    Pip version 24.0 or above
+
+Example usage:
+    python -m venv venv
+    venv\Scripts\activate
+    pip install -r requirements.txt
+    python InSign.py
+"""
+
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
 
@@ -2011,8 +2027,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             right_hand_point = results.right_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in right_hand_point]
                             y_coordinates = [landmark.y for landmark in right_hand_point]
-                            right_x_min = min(x_coordinates)
-                            right_y_min = min(y_coordinates)
+                            right_x_min = min(x_coordinates) * frame.shape[1]
+                            right_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             right_x_initial = list(x_coordinates - right_x_min)
@@ -2021,8 +2037,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             left_hand_point = results.left_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in left_hand_point]
                             y_coordinates = [landmark.y for landmark in left_hand_point]
-                            left_x_min = min(x_coordinates)
-                            left_y_min = min(y_coordinates)
+                            left_x_min = min(x_coordinates) * frame.shape[1]
+                            left_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             left_x_initial = list(x_coordinates - left_x_min)
@@ -2163,8 +2179,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             right_hand_point = results.right_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in right_hand_point]
                             y_coordinates = [landmark.y for landmark in right_hand_point]
-                            right_x_min = min(x_coordinates)
-                            right_y_min = min(y_coordinates)
+                            right_x_min = min(x_coordinates) * frame.shape[1]
+                            right_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             right_x_initial = list(x_coordinates - right_x_min)
@@ -2173,8 +2189,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             left_hand_point = results.left_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in left_hand_point]
                             y_coordinates = [landmark.y for landmark in left_hand_point]
-                            left_x_min = min(x_coordinates)
-                            left_y_min = min(y_coordinates)
+                            left_x_min = min(x_coordinates) * frame.shape[1]
+                            left_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             left_x_initial = list(x_coordinates - left_x_min)
@@ -2303,9 +2319,14 @@ landmark and bounding box switches to activate any markers that can appear in th
                    
             elif self.on_translate_camera_label and self.on_tranlsate_with_training_model is not None:
                 if self.on_tranlsate_with_training_model['algorithm'] == 'Convolutional Neural Network':
-                    cv2.rectangle(frame_mark, (0, 0), (300, 80), (255, 255, 255), -1)
+                    # cv2.rectangle(frame_mark, (0, 0), (300, 80), (255, 255, 255), -1)
+                    # cv2.putText(frame_mark, 'Class:', (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
+                    # cv2.putText(frame_mark, 'Prob:', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
+
+                    cv2.rectangle(frame_mark, (0, 0), (450, 80), (255, 255, 255), -1)
                     cv2.putText(frame_mark, 'Class:', (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
                     cv2.putText(frame_mark, 'Prob:', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
+                    cv2.putText(frame_mark, f'{self.on_tranlsate_with_training_model["algorithm"]}', (180, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
                     if results.right_hand_landmarks or results.left_hand_landmarks:
                         right_x_initial = [0] * 21
                         right_y_initial = [0] * 21
@@ -2459,9 +2480,10 @@ landmark and bounding box switches to activate any markers that can appear in th
                         self.count_time = 0
 
                 else:
-                    cv2.rectangle(frame_mark, (0, 0), (300, 80), (255, 255, 255), -1)
+                    cv2.rectangle(frame_mark, (0, 0), (450, 80), (255, 255, 255), -1)
                     cv2.putText(frame_mark, 'Class:', (100, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
                     cv2.putText(frame_mark, 'Prob:', (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
+                    cv2.putText(frame_mark, f'{self.on_tranlsate_with_training_model["algorithm"]}', (180, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1, cv2.LINE_AA)
                     if results.right_hand_landmarks or results.left_hand_landmarks:
                         right_x_initial = [0] * 21
                         right_y_initial = [0] * 21
@@ -2475,8 +2497,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             right_hand_point = results.right_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in right_hand_point]
                             y_coordinates = [landmark.y for landmark in right_hand_point]
-                            right_x_min = min(x_coordinates)
-                            right_y_min = min(y_coordinates)
+                            right_x_min = min(x_coordinates) * frame.shape[1]
+                            right_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             right_x_initial = list(x_coordinates - right_x_min)
@@ -2485,8 +2507,8 @@ landmark and bounding box switches to activate any markers that can appear in th
                             left_hand_point = results.left_hand_landmarks.landmark
                             x_coordinates = [landmark.x for landmark in left_hand_point]
                             y_coordinates = [landmark.y for landmark in left_hand_point]
-                            left_x_min = min(x_coordinates)
-                            left_y_min = min(y_coordinates)
+                            left_x_min = min(x_coordinates) * frame.shape[1]
+                            left_y_min = min(y_coordinates) * frame.shape[0]
                             x_coordinates = np.array(x_coordinates) * frame.shape[1]
                             y_coordinates = np.array(y_coordinates) * frame.shape[0]
                             left_x_initial = list(x_coordinates - left_x_min)
