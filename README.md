@@ -40,7 +40,7 @@ We recommend using python 3.8.10 and pip 24.0 to be able to download all the app
 1. python --version (output: python 3.8.10)
 2. pip --version (output: pip 24.0)
 
-Examplem usage:
+Example usage:
 
 1. python -m venv venv
 2. venv\Scripts\activate
